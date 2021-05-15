@@ -42,33 +42,7 @@ def get_response(intent_list):
     return answers[tag]
 
 
-# app = Flask(__name__)
-#
-#
-# @app.route('/', methods=['POST', 'GET'])
-# def weather():
-#     if request.method == 'POST':
-#         asi = request.form['city']
-#     else:
-#         asi="What are the symptoms of covid-19?"
-#     if asi=="":
-#         ints = predict_class(model, asi.lower())
-#         res = get_response(ints)
-#         data = {
-#             "Probability": ints[0]["probability"],
-#             "answer: ": res
-#         }
-#     else:
-#         data = {"Probability":0.0,
-#                 "answer":"Pls type something man"}
-#
-#     print(data)
-#     return render_template('index.html',data=data)
-#
-#
-# if __name__ == '__main__':
-#     app.run(debug = True)
-#
+
 app = Flask(__name__)
 
 
@@ -90,7 +64,8 @@ def weather():
     else:
         res = get_response(ints)
         data = {
-           "Probability": ints[0]["probability"],
+            "City":city,
+           "Probability": str(int(float(ints[0]["probability"])*100.0))+"%",
             "answer": res
         }
     print(ints)
