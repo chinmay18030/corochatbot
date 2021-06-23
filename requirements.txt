@@ -7,3 +7,4 @@ gunicorn
 aiofiles
 Jinja2==3.0.1
 
+tensorflow==2.2
