@@ -6,4 +6,4 @@ keras==2.4.3
 gunicorn
 aiofiles
 Jinja2==3.0.1
-tensorflow
+tensorflow==2.5.0
