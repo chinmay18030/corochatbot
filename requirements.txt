@@ -2,7 +2,7 @@ keras_nightly==2.5.0.dev2021032900
 nltk==3.6.2
 numpy==1.21.0
 Flask==2.0.1
-tensorflow.keras==2.4.3
+tensorflow.keras
 gunicorn
 aiofiles
 Jinja2==3.0.1
